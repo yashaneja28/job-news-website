@@ -7,22 +7,20 @@
     height: 100%;
     background: url('books-background.jpg') no-repeat center center/cover;
     z-index: -1;
-    filter: blur(10px); /* Initial blur effect */
-    transition: filter 0.3s ease-in-out; /* Smooth transition for blur */
+    filter: blur(10px);
+    transition: filter 0.3s ease-in-out;
 }
 
-/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #003366;
-    background: transparent; /* Keep the main background transparent to reveal the image */
+    background: transparent;
 }
 
-/* News Alert styles with updated color */
 .news-alert {
-    background-color: rgba(255, 165, 0, 0.8); /* Orange background */
+    background-color: rgba(255, 165, 0, 0.8);
     color: white;
     padding: 10px 0;
     font-size: 18px;
@@ -35,7 +33,6 @@ body {
     animation: scrollNews 20s linear infinite;
 }
 
-/* Animation for scrolling text */
 @keyframes scrollNews {
     0% {
         transform: translateX(100%);
@@ -45,7 +42,6 @@ body {
     }
 }
 
-/* Header styling */
 header {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(5px);
@@ -58,11 +54,10 @@ header {
     z-index: 10;
 }
 
-/* Hamburger Icon - Three Horizontal Lines */
 .three-dots-container {
     position: fixed;
     top: 20px;
-    left: 20px; /* Move it to the left */
+    left: 20px;
     z-index: 1000;
 }
 
@@ -71,42 +66,52 @@ header {
     border: none;
     cursor: pointer;
     padding: 10px;
-    transition: transform 0.3s ease; /* Smooth transition for movement */
+    transition: transform 0.3s ease;
 }
 
-/* Hamburger bar color changed to white */
 .bar {
     display: block;
     width: 35px;
     height: 5px;
     margin: 6px auto;
-    background-color: white; /* White color for visibility */
+    background-color: white;
     border-radius: 5px;
-    transition: all 0.3s ease; /* Smooth transition for the transformation */
+    transition: all 0.3s ease;
 }
 
-/* Sliding Panel Styles */
 .side-panel {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden off-screen */
+    left: -250px;
     width: 250px;
     height: 100%;
-    background-color: rgba(0, 51, 102, 0.8); /* Transparent background with glass effect */
+    background-color: rgba(0, 51, 102, 0.8);
     color: white;
-    transition: left 0.3s ease, background-color 0.3s ease; /* Smooth transition for movement and background color */
+    transition: left 0.3s ease, background-color 0.3s ease;
     padding: 20px;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
     z-index: 999;
-    backdrop-filter: blur(10px); /* Creates the glass effect */
+    backdrop-filter: blur(10px);
 }
 
-/* Panel content margin and positioning */
 .panel-content {
     margin-top: 50px;
 }
 
-/* Dropdown Button */
+.panel-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.panel-link:hover {
+    background-color: #00509e;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
 .dropdown-btn {
     background-color: #00509e;
     color: white;
@@ -120,11 +125,6 @@ header {
     margin: 5px 0;
 }
 
-.dropdown-btn:hover {
-    background-color: #003366;
-}
-
-/* Main Dropdown Content */
 .dropdown-content {
     display: none;
     background-color: #003366;
@@ -144,47 +144,23 @@ header {
     background-color: #00509e;
 }
 
-/* RPSC Dropdown specific styling */
-.rpsc-dropdown {
-    margin-top: 10px;
-}
-
-/* Section styling */
-section {
-    padding: 40px 20px;
-    margin: 20px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer styling */
+/* Footer Styling */
 footer {
     background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(5px);
     text-align: center;
     padding: 10px 0;
     position: fixed;
     bottom: 0;
     width: 100%;
-    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles when the panel is open */
-.side-panel.open {
-    left: 0; /* Slide the panel in */
-}
-
-/* Styles for the hamburger icon when panel is open */
-.three-dots-btn.open .bar:nth-child(1) {
-    transform: translateY(11px) rotate(45deg); /* First bar rotates */
-}
-
-.three-dots-btn.open .bar:nth-child(2) {
-    opacity: 0; /* Middle bar disappears */
-}
-
-.three-dots-btn.open .bar:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg); /* Third bar rotates */
+/* White Box for Content */
+.content-box {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
